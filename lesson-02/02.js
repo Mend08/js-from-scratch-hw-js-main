@@ -16,9 +16,9 @@ console.log("Первый бросок: " + dice1);
 console.log("Второй бросок: " + dice2);
 
 if (dice1dice2 === 1 && dice1 === dice2 && dice1 + dice2 > 6) {
-  isWinningDouble = true;
   console.log("Выигрышный дубль!");
+  isWinningDouble = true;
 } else {
-  isWinningDouble = false;
   console.log("Не выигрышный дубль.");
+  isWinningDouble = false;
 }
