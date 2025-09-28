@@ -36,7 +36,6 @@ const words = [
 ];
 
 function callback(element, index) {
-  console.log(index, element === "apple");
   return element === "apple";
 }
 
@@ -50,6 +49,3 @@ const filter = (arr, call) => {
   }
   return result;
 };
-
-const aa = filter(words, callback);
-console.log(aa);
