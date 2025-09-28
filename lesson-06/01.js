@@ -23,4 +23,33 @@ const oddNumbers = filter(numbers, (element, index) => {
 console.log(oddNumbers) // Должен вывести: [1, 3, 5]
 */
 
-const filter = () => {}
+const words = [
+  "banana",
+  "apple",
+  "orange",
+  "apple",
+  "grape",
+  "apple",
+  "melon",
+  "apple",
+  "pear",
+];
+
+function callback(element, index) {
+  console.log(index, element === "apple");
+  return element === "apple";
+}
+
+const filter = (arr, call) => {
+  const result = [];
+  for (let i = 0; i < arr.length; i++) {
+    const x = call(arr[i], i);
+    if (x === true) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+};
+
+const aa = filter(words, callback);
+console.log(aa);
